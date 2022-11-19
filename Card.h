@@ -4,7 +4,7 @@
 
 
 using namespace std;
-using Num = unsigned int; //����������
+using Num = unsigned int;
 class Player;
 class Card;
 
@@ -27,8 +27,8 @@ public:
 	string getname() { return name_; }
 	vector<Card>& getCards() { return ownCards_; }
 private:
-	vector<Card>& ownCards_;  //���ӵ�е��� 
-	string name_;       //�������
+	vector<Card>& ownCards_;  
+	string name_;      
 
 };
 
@@ -41,9 +41,9 @@ public:
 	
 	using CardInfo = pair<int, Num>;
 	Card(int kind, Num num) { kind_ = kind; num_ = num;  }
-	CardInfo gettheinfo() { return make_pair(kind_, num_); }  //��ȡ����Ϣ
+	CardInfo gettheinfo() { return make_pair(kind_, num_); } 
 private:
-	int kind_;  //��ɫ
-	Num  num_;   //����
+	int kind_;  
+	Num  num_;  
 };
 
