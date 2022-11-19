@@ -4,7 +4,7 @@
 
 
 using namespace std;
-using Num = unsigned int; //ÅÆÊýµÄÀàÐÍ
+using Num = unsigned int; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 class Player;
 class Card;
 
@@ -24,13 +24,11 @@ public:
 
 	Player(vector<Card>& cardsgiven, string name) :ownCards_(cardsgiven), name_(name) {}
 	~Player() {}
-
-	
 	string getname() { return name_; }
 	vector<Card>& getCards() { return ownCards_; }
 private:
-	vector<Card>& ownCards_;  //Íæ¼ÒÓµÓÐµÄÅÆ 
-	string name_;       //Íæ¼ÒÐÕÃû
+	vector<Card>& ownCards_;  //ï¿½ï¿½ï¿½Óµï¿½Ðµï¿½ï¿½ï¿½ 
+	string name_;       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 };
 
@@ -43,10 +41,9 @@ public:
 	
 	using CardInfo = pair<int, Num>;
 	Card(int kind, Num num) { kind_ = kind; num_ = num;  }
-
-	CardInfo gettheinfo() { return make_pair(kind_, num_); }  //»ñÈ¡ÅÆÐÅÏ¢
+	CardInfo gettheinfo() { return make_pair(kind_, num_); }  //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ï¢
 private:
-	int kind_;  //»¨É«
-	Num  num_;   //Êý×Ö
+	int kind_;  //ï¿½ï¿½É«
+	Num  num_;   //ï¿½ï¿½ï¿½ï¿½
 };
 
