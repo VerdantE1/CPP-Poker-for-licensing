@@ -40,7 +40,6 @@ bool CardPool::start_distribution()
 	{
 		for (unsigned int j = 1; j <= (unsigned int)13; j++)
 		{
-			cout << Kindto(i) << " : " << j << endl;
 			distribution(i,j);
 		}
 	}
@@ -93,11 +92,12 @@ bool CardPool::display()
 	{
 		cout << allplayer_[i].getname() << " : ";
 		vector<Card>& cards = allplayer_[i].getCards();
+		
+		for_each(cards.begin(), cards.end(), [&]( Card card)
+			{
+			cout << Kindto(card.gettheinfo().first) << card.gettheinfo().second << " ";
+			});
 
-		for (int i = 0; i < cards.size(); i++)
-		{
-			cout << Kindto(cards[i].gettheinfo().first) << cards[i].gettheinfo().second << " ";
-		}
 		cout << endl;
 
 	}
