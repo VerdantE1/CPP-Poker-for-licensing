@@ -93,7 +93,7 @@ bool CardPool::display()
 		cout << allplayer_[i].getname() << " : ";
 		vector<Card>& cards = allplayer_[i].getCards();
 		
-		for_each(cards.begin(), cards.end(), [&]( Card card)
+		for_each(cards.begin(), cards.end(), [&](const Card & card)
 			{
 			cout << Kindto(card.gettheinfo().first) << card.gettheinfo().second << " ";
 			});
