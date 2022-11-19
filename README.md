@@ -1,2 +1,2 @@
 # CPP Poker for licensing
- C++，设计一个扑克发牌器
+ C++以OOP方式设计一个扑克发牌器
