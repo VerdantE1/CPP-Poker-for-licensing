@@ -11,8 +11,8 @@ class CardPool
 {
 public:
 	CardPool(vector<string>&);
-	bool start_distribution(); //开始分牌
-	bool display(); //显示所有的牌
+	bool start_distribution(); 
+	bool display(); 
 
 private:
 	
